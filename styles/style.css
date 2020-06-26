@@ -30,6 +30,9 @@
     --content-padding: 50px;
     --content-width: 50%;
     --site-margin: 15%;
+    --shadow: 0 10px 5px -5px rgba(0,0,0,0.08), 5px 7px 10px -2px rgba(0,0,0,0.1);
+    --shadow-high: 0 20px 15px -5px rgba(0,0,0,0.08), 5px 9px 15px 0px rgba(0,0,0,0.1);
+    --shadow-inset: inset 0 10px 5px -5px rgba(0,0,0,0.08), inset 5px 9px 15px 2px rgba(0,0,0,0.1), 0 2px 5px -2px #fff;
     
 }
 
@@ -61,8 +64,9 @@ nav {
 
 .heading-style {
     margin-bottom: 10px;
-    font-size: var(--fs_400);
+    font-size: var(--fs_500);
     font-weight: 700;
+    letter-spacing: 0px;
 
 }
 
@@ -71,6 +75,13 @@ nav {
     padding: var(--content-padding);
     line-height: 2.5rem;
     letter-spacing: 2px;
+    box-shadow: var(--shadow);
+}
+
+.content-alt {
+    color: var(--color-primary-500);
+    background-color: var(--color-primary-900);
+    box-shadow: var(--shadow-inset);
 }
 
 .site-header {
@@ -116,10 +127,8 @@ nav {
     border-radius: 10px;
 
     font-size: var(--fs_300);
-    color: var(--color-primary-400);
 
-    color: var(--color-primary-500);
-    background-color: var(--color-primary-900);
+    
 
 }
 
@@ -142,7 +151,7 @@ nav {
 .technologies__heading {
     margin-bottom: 80px;
     text-align: center;
-    font-size: var(--fs_500);
+    font-size: var(--fs_600);
 
 }
 
@@ -159,6 +168,8 @@ nav {
     overflow: hidden;
 
     position: relative;
+
+    box-shadow: var(--shadow-high);
 
 }
 
@@ -263,6 +274,7 @@ nav {
 .closing {
     height: calc(100vh - 75px);
     padding: 200px 0;
+    box-shadow: none;
 }
 
 .closing p {
@@ -276,6 +288,7 @@ nav {
 }
 
 .closing li {
+    transition: 0.5s;
     width: 400px;
     border: 2px solid var(--color-primary-700);
     border-radius: 10px;
@@ -293,4 +306,15 @@ nav {
     color: var(--color-primary-1000);
     font-weight: 700;
     text-decoration: none;
+
+}
+
+.ghost {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.ghost:hover {
+    background-color: var(--color-primary-300);
 }
