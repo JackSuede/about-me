@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.theme-colors {
+.theme-primary-colors {
     margin-top: 200px;
     display: flex;
     justify-content: space-between;
@@ -178,4 +178,15 @@ nav {
 .your-gain__header {
     color: var(--color-primary-100);
     
+}
+
+
+.technologies__proficiency--needs-work {
+    color: var(--color-primary-500);
+    background-color: var(--color-primary-900);
+}
+
+.technologies__proficiency__label {
+    font-weight: 700;
+    font-size: var(--fs_200);
 }
