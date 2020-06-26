@@ -84,8 +84,8 @@ nav {
 
     display: flex;
     justify-content: space-between;
-    position: sticky;
-    top: 0px;
+    /* position: sticky; */
+    /* top: 0px; */
 
     font-size: var(--fs_300);
     color: var(--color-primary-900);
@@ -181,7 +181,18 @@ nav {
 }
 
 
-.technologies__proficiency--needs-work {
+.technologies__list {
+  display: flex;
+}
+
+.technologies__proficiency {
+  padding:50px 50px;
+  margin: 20px;
+  border: 2px solid var(--color-primary-700);
+  border-radius: 10px;
+}
+
+.technologies__proficiency--needs-work, .technologies__proficiency--surfacey {
     color: var(--color-primary-500);
     background-color: var(--color-primary-900);
 }
