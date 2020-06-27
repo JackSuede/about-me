@@ -245,10 +245,6 @@ nav {
 .priorities__header {
     margin-bottom: 20px;
 }
-.priorities__body {
-    /* font-size: var(--fs_300); */
-
-}
 
 .priorities__plan-list {
     padding-left: 4ch;
@@ -276,10 +272,6 @@ nav {
 
 .closing {
     box-shadow: none; 
-}
-
-.closing p {
-    /* margin-bottom: 50px; */
 }
 
 .closing ul {
@@ -394,7 +386,6 @@ nav {
     
     
     .closing {
-        height: calc(100vh - 75px);
         padding: 100px 0;
         box-shadow: none; 
 
@@ -488,7 +479,6 @@ nav {
     
     .closing {
         box-sizing: content-box;
-        height: calc(100vh - 200px);
         padding: 100px 0;
         box-shadow: none; 
 
