@@ -324,19 +324,12 @@ nav {
 
     nav {
     
-        /* padding: 25px calc(var(--site-margin) + var(--content-padding)); */
-        padding: 25px 30px;
+        padding: 15px 30px;
         flex-direction: row;
         justify-content: space-between;
     
-        font-size: var(--fs_300);
+        font-size: var(--fs_100);
     }
-/* doubting this needs to change.. depricated.
-    .page {
-        padding: 0 var(--site-margin);
-        
-    } 
-*/
 
     .heading-style {
         margin-bottom: 10px;
