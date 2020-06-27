@@ -26,6 +26,8 @@
     --color-primary-900: hsl(0, 0%, 95%);
     --color-primary-1000: hsl(0, 0%, 99%);
 
+    --font-family: 'Poppins', sans-serif;
+
     /* Variable variables */
     --spacer: 50px;
     --content-padding: 50px;
@@ -94,6 +96,8 @@ nav {
     font-size: var(--color-primary-100);
     line-height: 2rem;
     letter-spacing: 1px;
+
+    font-family: var(--font-family);
 }
 
 .content-alt {
@@ -176,6 +180,8 @@ nav {
 
     box-shadow: var(--shadow-high);
 
+    font-family: var(--font-family);
+
 }
 
 .proficiency__feature-ribbon {
@@ -210,7 +216,7 @@ nav {
 
 .proficiency__body {
     min-height: 520px;
-    --width: 300px;
+    --width: 350px;
     
     min-width: var(--width);
     max-width: var(--width);
@@ -227,12 +233,12 @@ nav {
 .proficiency__list {
     min-height: 100px;
     margin-bottom: 30px;
-    list-style: none;
+    /* list-style: none; */
     font-weight: 400;
 }
 
 .proficiency__list li {
-    padding-left: 2ch;
+    margin-left: 2ch;
 
 }
 
@@ -375,11 +381,11 @@ nav {
     }
 
     
-    .proficiency__body {
+    /* .proficiency__body {
         --width: 300px;
         min-width: var(--width);
         max-width: var(--width);
-    }
+    } */
     
     
     .closing {
@@ -474,11 +480,11 @@ nav {
     }
 
     
-    .proficiency__body {
+    /* .proficiency__body {
         --width: 300px;
         min-width: var(--width);
         max-width: var(--width);
-    }
+    } */
     
     
     .closing {
