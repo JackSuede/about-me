@@ -63,7 +63,7 @@ nav {
 
 .page {
     margin: auto;
-    width: 100vw;
+    width: 100%;
     /* padding: 0 var(--site-margin); */
     display: flex;
     flex-direction: column;
@@ -208,7 +208,7 @@ nav {
 .proficiency__body {
     min-height: 520px;
     --width: 300px;
-    --width: 100vw;
+    
     min-width: var(--width);
     max-width: var(--width);
 
@@ -259,7 +259,7 @@ nav {
 }
 
 .footer {
-    min-width: 100vw;
+    min-width: 100%;
     
     display: flex;
     flex-direction: column;
