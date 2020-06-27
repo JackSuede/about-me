@@ -47,7 +47,7 @@ nav {
     position: sticky;
     top: 0px;
 
-    font-size: var(--fs_300);
+    font-size: var(--fs_100);
     color: var(--color-primary-900);
     background-color: var(--color-primary-100);
 
