@@ -26,7 +26,8 @@
     --color-primary-900: hsl(0, 0%, 95%);
     --color-primary-1000: hsl(0, 0%, 99%);
 
-    --spacer: 120px;
+    /* Variable variables */
+    --spacer: 50px;
     --content-padding: 50px;
     --content-width: 50%;
     --site-margin: 15%;
@@ -37,10 +38,12 @@
 }
 
 nav {
-    padding: 25px calc(var(--site-margin) + var(--content-padding));
-
+    
+    padding: 10px 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: sticky;
     top: 0px;
 
@@ -49,6 +52,13 @@ nav {
     background-color: var(--color-primary-100);
 
     z-index: 999;
+
+    
+}
+
+#redundant-name {
+    /* mobile */
+    display: none;
 }
 
 .page {
@@ -62,35 +72,33 @@ nav {
 
 }
 
+.site-header {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .heading-style {
     margin-bottom: 10px;
-    font-size: var(--fs_500);
+    font-size: var(--fs_300);
     font-weight: 700;
     letter-spacing: 0px;
 
 }
 
 .content {
-    width: var(--content-width);
-    padding: var(--content-padding);
-    line-height: 2.5rem;
-    letter-spacing: 2px;
-    box-shadow: var(--shadow);
+    padding: 50px 15px;
+    font-size: var(--color-primary-100);
+    line-height: 2rem;
+    letter-spacing: 1px;
 }
 
 .content-alt {
     color: var(--color-primary-500);
     background-color: var(--color-primary-900);
-    box-shadow: var(--shadow-inset);
-}
-
-.site-header {
-    margin-top: 150px;
-    margin-bottom: 200px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .site-header__main {
@@ -104,7 +112,6 @@ nav {
 
 .hook {
     margin-bottom: var(--spacer);
-    font-size: var(--fs_300);
     color: var(--color-primary-400);
 }
 
@@ -125,11 +132,6 @@ nav {
 .personal-background {
     margin-bottom: var(--spacer);
     border-radius: 10px;
-
-    font-size: var(--fs_300);
-
-    
-
 }
 
 .personal-background__header {
@@ -138,8 +140,7 @@ nav {
 }
 
 .your-gain {
-    margin-bottom: 200px;
-    font-size: var(--fs_300);
+    margin-bottom: 100px;
     color: var(--color-primary-400);
 }
 
@@ -151,7 +152,8 @@ nav {
 .technologies__heading {
     margin-bottom: 80px;
     text-align: center;
-    font-size: var(--fs_600);
+    /* font-size: var(--fs_600); */
+    font-size: var(--fs_500);
 
 }
 
@@ -206,10 +208,11 @@ nav {
 .proficiency__body {
     min-height: 520px;
     --width: 300px;
+    --width: 100vw;
     min-width: var(--width);
     max-width: var(--width);
 
-    padding: 50px 50px 0;
+    padding: 80px 50px 50px 70px;
 
     font-weight: bold;
     font-size: var(--fs_200);
@@ -243,7 +246,8 @@ nav {
     margin-bottom: 20px;
 }
 .priorities__body {
-    font-size: var(--fs_300);
+    /* font-size: var(--fs_300); */
+
 }
 
 .priorities__plan-list {
@@ -265,31 +269,29 @@ nav {
     flex-direction: column;
     align-items: center;
 
-    font-size: var(--fs_300);
     color: var(--color-primary-800);
     background-color: var(--color-primary-200);
 
 }
 
 .closing {
-    height: calc(100vh - 75px);
-    padding: 200px 0;
-    box-shadow: none;
+    box-shadow: none; 
 }
 
 .closing p {
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 
 .closing ul {
     list-style: none;
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center; 
 }
 
 .closing li {
     transition: 0.5s;
-    width: 400px;
+    width: 300px;
     border: 2px solid var(--color-primary-700);
     border-radius: 10px;
     padding: 10px;
@@ -305,7 +307,7 @@ nav {
 .closing ul a {
     color: var(--color-primary-1000);
     font-weight: 700;
-    text-decoration: none;
+    text-decoration: none; 
 
 }
 
@@ -317,4 +319,201 @@ nav {
 
 .ghost:hover {
     background-color: var(--color-primary-300);
+}
+
+@media only screen and (min-width: 600px) {
+
+    :root {
+        /* Variable variables */
+        --spacer: 100px;
+        --content-padding: 50px;
+        --content-width: 80%;
+    }
+
+    nav {
+    
+        /* padding: 25px calc(var(--site-margin) + var(--content-padding)); */
+        padding: 25px 30px;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        font-size: var(--fs_300);
+    }
+/* doubting this needs to change.. depricated.
+    .page {
+        padding: 0 var(--site-margin);
+        
+    } 
+*/
+
+    .heading-style {
+        margin-bottom: 10px;
+        font-size: var(--fs_400);
+    }
+
+
+    .content {
+        width: var(--content-width);
+        padding: var(--content-padding);
+        font-size: var(--fs_200);
+        line-height: 2.5rem;
+        letter-spacing: 2px;
+        box-shadow: var(--shadow);
+    }
+    
+    .content-alt {
+        font-size: var(--fs_200);
+        color: var(--color-primary-500);
+        background-color: var(--color-primary-900);
+        box-shadow: var(--shadow-inset);
+    }
+
+    .site-header {
+        margin-top: 120px;
+        margin-bottom: 150px;
+    }
+
+
+    .technologies__heading {
+        margin-bottom: 100px;
+        font-size: var(--fs_500);
+        /* font-size: var(--fs_600); */
+    
+    }
+    
+    .technologies__list {
+        justify-content: space-evenly;
+    }
+
+    
+    .proficiency__body {
+        --width: 300px;
+        min-width: var(--width);
+        max-width: var(--width);
+    }
+    
+    
+    .closing {
+        height: calc(100vh - 75px);
+        padding: 100px 0;
+        box-shadow: none; 
+
+    }
+    
+    .closing p {
+        margin-bottom: 50px;
+    }
+    
+    .closing ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    
+    .closing li {
+        width: 300px;
+        padding: 5px;
+        margin: 15px 30px;
+    }
+    
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    :root {
+        /* Variable variables */
+        --spacer: 150px;
+        --content-padding: 100px;
+        --content-width: 50%;
+    }
+
+    nav {
+    
+        padding: 25px calc(var(--site-margin) + var(--content-padding));
+        flex-direction: row;
+        justify-content: space-between;
+    
+        font-size: var(--fs_300);
+    }
+
+    .heading-style {
+        margin-bottom: 15px;
+        font-size: var(--fs_500);
+    }
+
+
+    .content {
+        width: var(--content-width);
+        padding: var(--content-padding);
+        font-size: var(--fs_300);
+        line-height: 2.5rem;
+        letter-spacing: 2px;
+        box-shadow: var(--shadow);
+    }
+    
+    .content-alt {
+        background-color: var(--color-primary-900);
+        box-shadow: var(--shadow-inset);
+    }
+
+    .site-header {
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+
+    .your-gain {
+        margin-bottom: 200px;
+    }
+
+    .technologies__heading {
+        margin-bottom: 100px;
+        font-size: var(--fs_600);
+    
+    }
+    
+    .technologies__list {
+        justify-content: space-around;
+    }
+
+    
+    .proficiency__body {
+        --width: 300px;
+        min-width: var(--width);
+        max-width: var(--width);
+    }
+    
+    
+    .closing {
+        box-sizing: content-box;
+        height: calc(100vh - 200px);
+        padding: 100px 0;
+        box-shadow: none; 
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    .closing p {
+        margin-bottom: 50px;
+    }
+    
+    .closing li {
+        width: 400px;
+        padding: 10px;
+        margin: 15px 30px;
+    }
+    
+    
+@media only screen and (min-width: 1300px) {
+    #redundant-name {
+        display: inline;
+    }
+}
+
 }
