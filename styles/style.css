@@ -102,12 +102,15 @@ nav {
 }
 
 .site-header__main {
+    margin-bottom: 10px;
+
     color: var(--color-primary-200);
-    font-size: var(--fs_800);
+    font-size: var(--fs_700);
 }
 
 .site-header__sub {
     color: var(--color-primary-500);
+    font-size: var(--fs_200);
 }
 
 .hook {
@@ -447,6 +450,13 @@ nav {
     .site-header {
         margin-top: 150px;
         margin-bottom: 150px;
+    }
+
+    .site-header__main {
+        font-size: var(--fs_800);
+    }
+    .site-header__sub {
+        font-size: var(--fs_300);
     }
 
     .your-gain {
