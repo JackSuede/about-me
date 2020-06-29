@@ -295,7 +295,7 @@ nav {
     margin: 10px 0;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: baseline;
 }
 
@@ -331,11 +331,12 @@ nav {
 }
 
 .like-label {
-    width: 9ch;
-    padding: 3px 15px;
+    padding: 10px 20px;
     border-radius: 10px;
 
     text-align: center;
+    line-height: 1em;
+    letter-spacing: 0px;
     font-size: var(--fs_100);
     font-weight: 400;
     color: var(--color-primary-100);
