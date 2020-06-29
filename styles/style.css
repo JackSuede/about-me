@@ -270,7 +270,7 @@ nav {
 
 
 
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .comments {
@@ -279,8 +279,10 @@ nav {
 
 .comment {
     margin: 10px 5px;
-    background-color: var(--color-primary-900);
     padding: 20px;
+    border-radius: 10px;
+    
+    background-color: var(--color-primary-900);
 }
 
 .new-comment {
@@ -333,6 +335,7 @@ nav {
 .like-label {
     padding: 10px 20px;
     border-radius: 10px;
+    width: 9ch;
 
     text-align: center;
     line-height: 1em;

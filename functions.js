@@ -1,27 +1,31 @@
 
-const submit = document.querySelectorAll('.submit');
-const package1 = document.getElementById('package-1');
-const package2 = document.getElementById('package-2');
-const package3 = document.getElementById('package-3');
-
-
-for (let ii = 0; ii < submit.length; ii++) {
-    submit[ii].addEventListener('click', submitComment, );
-    
-}
 
 const database = firebase.database();
 
-//Load comments
+//Load and display comments
 database.ref(`/comments`).on('value', getComments, errData);
 
+
+// Adds event listeners to comment submit buttons.
+(function () {
+
+    const submit = document.querySelectorAll('.submit');
+    
+    for (let ii = 0; ii < submit.length; ii++) {
+        submit[ii].addEventListener('click', submitComment, );
+        
+    }
+
+})();
+
+
+// Adds event listeners to toggle the classes for the like button.
 (function () {
     const headerInputDivs = document.querySelectorAll('.new-comment__header-inputs');
+    console.log('this', headerInputDivs)
+
     headerInputDivs.forEach(headerInputDiv => {
         headerInputDiv.addEventListener('click', e => {
-            if (e.target.id === '') {
-                
-            }
 
             const likeCheckbox = headerInputDiv.querySelector('.like');
             const likeLabel = headerInputDiv.querySelector('.like-label');
@@ -35,35 +39,33 @@ database.ref(`/comments`).on('value', getComments, errData);
 
         });
     });
-})()
+})();
+
 
 function getComments(data) {
     const packages = data.val();
 
-    const commentSections = document.querySelectorAll('.proficiency__footer');
-
-    
+    const commentSections = document.querySelectorAll('.comment-section');
 
     for (let ii = 0; ii < commentSections.length; ii++) {
+        
         const commentSection = commentSections[ii];
         const commentsDiv = commentSection.querySelector('.comments')
         commentsDiv.innerHTML = "";
+        
         const comments  = packages[commentSection.id]
 
         for (const commentId in comments) {
+
             if (comments.hasOwnProperty(commentId)) {
                 const comment = comments[commentId];
                 
                 const likedText = getLikedText(comment.liked);
                 commentsDiv.innerHTML += getCommentHTML(comment.name, likedText, comment.commentBody);
                 
-
-                
             }
         }
-       
     }
-
 }
 
 
@@ -71,10 +73,10 @@ function submitComment() {
     event.preventDefault();
     
     const form = document.querySelector('#' + event.target.parentNode.parentNode.parentNode.id);
-
+    console.log('form', form);
+    
     const commentField = form.querySelector('.comment-field');
     const liked = form.querySelector('.like');
-    console.log('liked', liked.checked);
     
     const name = form.querySelector('.new-comment__name');
     
@@ -97,12 +99,9 @@ function getCommentHTML(name, likedText, comment) {
 
 function getLikedText(bool) {
     let text;
-    console.log(bool)
-    if (bool) {
-        text = 'Liked';
-    } else {
-        text = "Didn't like"
-    }
+    
+    if (bool) text = 'Liked';
+    else text = "Didn't like";
 
     return text;
 }
