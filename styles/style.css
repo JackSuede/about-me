@@ -594,6 +594,10 @@ nav {
         font-size: var(--fs_300);
     }
 
+    .your-gain-copy {
+        margin-bottom: 100px;
+    }
+
     .your-gain {
         margin-bottom: 200px;
     }
