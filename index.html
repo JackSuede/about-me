@@ -75,7 +75,20 @@
                                 This is really where I have spent most of my learning.
                             </div>
                         </main>
-                        <footer class="proficiency__footer"></footer>
+                        <footer id="package-1" class="proficiency__footer">
+                            <div class="comments"></div>
+                            <form class="new-comment">
+                                <label for="comment-field-1">Comment</label>
+                                <textarea class="comment-field"  id="comment-field-1" placeholder="Got something to say?"></textarea>
+                                <div class="new-comment__header-inputs">
+                                    <!-- <label for="name-1">Name</label> -->
+                                    <input id="name-1" class="new-comment__name" type="text" placeholder="Your name">
+                                    <label for="like-1" class="like-label">I like</label>
+                                    <input type="checkbox" class="like" id="like-1">
+                                    <button class="submit">Done</button>
+                                </div>
+                            </form>
+                        </footer>
                     </div>
 
                     <div class="proficiency">
@@ -92,7 +105,20 @@
                                 I know a nice chunk of these, but I would be more comfortable with more learning.
                             </div>
                         </main>
-                        <footer class="proficiency__footer"></footer>
+                        <footer id="package-2" class="proficiency__footer">
+                            <div class="comments"></div>
+                            <form class="new-comment">
+                                <label for="comment-field-2">Comment</label>
+                                <textarea class="comment-field"  id="comment-field-2" placeholder="Got something to say?"></textarea>
+                                <div class="new-comment__header-inputs">
+                                    <!-- <label for="name-2">Name</label> -->
+                                    <input id="name-2" class="new-comment__name" type="text" placeholder="Your name">
+                                    <label for="like-2" class="like-label">I like</label>
+                                    <input type="checkbox" class="like" id="like-2">
+                                    <button class="submit">Done</button>
+                                </div>
+                            </form>
+                        </footer>
                     </div>
 
                     <div class="proficiency">
@@ -107,7 +133,20 @@
                                 I'm really just scratching the surface, but it been easy to learn so far. This feels low priority right now.
                             </div>
                         </main>
-                        <footer class="proficiency__footer"></footer>
+                        <footer id="package-3" class="proficiency__footer">
+                            <div class="comments"></div>
+                            <form class="new-comment">
+                                <label for="comment-field-3">Comment</label>
+                                <textarea class="comment-field"  id="comment-field-3" placeholder="Got something to say?"></textarea>
+                                <div class="new-comment__header-inputs">
+                                    <!-- <label for="name-3">Name</label> -->
+                                    <input id="name-3" class="new-comment__name" type="text" placeholder="Your name">
+                                    <label for="like-3" class="like-label">I like</label>
+                                    <input type="checkbox" class="like" id="like-3">
+                                    <button class="submit">Done</button>
+                                </div>
+                            </form>
+                        </footer>
                     </div>
 
                     
@@ -136,6 +175,21 @@
 
                 </main>
 
+                <footer id="comments-4" class="proficiency__footer">
+                    <div class="comments"></div>
+                    <form class="new-comment">
+                        <label for="comment-field-4">Comment</label>
+                        <textarea class="comment-field"  id="comment-field-4" placeholder="Got something to say?"></textarea>
+                        <div class="new-comment__header-inputs">
+                            <!-- <label for="name-4">Name</label> -->
+                            <input id="name-4" class="new-comment__name" type="text" placeholder="Your name">
+                            <label for="like-4" class="like-label">I like</label>
+                            <input type="checkbox" class="like" id="like-4">
+                            <button class="submit">Done</button>
+                        </div>
+                    </form>
+                </footer>
+
             </article>
 
         <footer class="footer">
@@ -156,5 +210,36 @@
         </footer>
 
     </div> <!-- End of page-->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script> -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAVKRqIkbmxMeHgwmiCWtFGEtOZOE8ScN0",
+    authDomain: "about-me-70941.firebaseapp.com",
+    databaseURL: "https://about-me-70941.firebaseio.com",
+    projectId: "about-me-70941",
+    storageBucket: "about-me-70941.appspot.com",
+    messagingSenderId: "577247052264",
+    appId: "1:577247052264:web:1cfcce0309bf53221ae45d",
+    measurementId: "G-1HB2EWLWKX"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+</script>
+
+<script defer src="./functions.js"></script>
+
 </body>
 </html>
