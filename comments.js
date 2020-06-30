@@ -22,7 +22,7 @@ function createCommentSection(uniqueId) {
 
         `
         <label for="comment-field-${uniqueId}">Comment</label>
-        <textarea class="comment-field"  id="comment-field-${uniqueId}" placeholder="Got something to say?"></textarea>
+        <textarea class="comment-field"  id="comment-field-${uniqueId}" placeholder="${placeholderGenerator()}"></textarea>
         
         <div class="new-comment__header-inputs">
             <input id="name-${uniqueId}" class="new-comment__name" type="text" placeholder="Your name">
@@ -35,3 +35,63 @@ function createCommentSection(uniqueId) {
 
     return form;
 }
+
+function placeholderGenerator() {
+    const placeholderQty = inputPlaceholder.length;
+    const randomChoice = Math.floor(Math.random() * placeholderQty);
+    
+    if (randomChoice >= placeholderQty || randomChoice < 0) {
+        console.warn('randomchoice is:', randomChoice);
+    }
+    return inputPlaceholder[randomChoice];
+    
+}
+
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();
+placeholderGenerator();

@@ -101,7 +101,7 @@ nav {
 }
 
 .content {
-    padding: 50px 15px;
+    padding: 50px 15px 90px;
     font-size: var(--color-primary-100);
     line-height: 2rem;
     letter-spacing: 1px;
@@ -272,6 +272,11 @@ nav {
 
 
     overflow-y: auto;
+}
+
+.comment-section {
+    padding-top: 15px;
+    border-top: 2px solid var(--color-primary-800);
 }
 
 .comments {
@@ -461,10 +466,11 @@ nav {
     background-color: var(--color-primary-300);
 }
 
-/* @media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
 
     .page {
         width: 100%;
+        display: block;
     }
 
     .site-header__main {
@@ -478,7 +484,45 @@ nav {
     .your-gain {
         width: 100%;
     }
-} */
+
+    .proficiency {
+        min-width: 100%;
+        border-radius: 0px;
+    }
+
+    .proficiency__body {
+        min-height: 300px;
+        padding: 60px 60px 20px 30px;
+        font-size: var(--fs_100);
+    }
+
+    ul.proficiency__list {
+        min-height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .proficiency__footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .comment-field {
+        margin-right: 10px;
+    }
+
+    .priorities {
+        max-width: 100%;
+        display: block;
+    }
+
+    .priorities__body {
+        max-width: 100%;
+        padding-right: 10px;
+        display: block;
+    }
+
+}
 
 @media only screen and (min-width: 600px) {
 
@@ -508,6 +552,7 @@ nav {
     .content {
         width: var(--content-width);
         padding: var(--content-padding);
+        padding-bottom: 90px;
         font-size: var(--fs_200);
         line-height: 2.5rem;
         letter-spacing: 2px;
@@ -600,6 +645,7 @@ nav {
     .content {
         width: var(--content-width);
         padding: var(--content-padding);
+        padding-bottom: 90px;
         font-size: var(--fs_300);
         line-height: 2.5rem;
         letter-spacing: 2px;

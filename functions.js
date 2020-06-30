@@ -110,3 +110,4 @@ function errData (err) {
     console.log('error', err);
     alert('There was an error in submitting your comment', err);
 }
+
