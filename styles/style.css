@@ -267,6 +267,7 @@ nav {
 
 .proficiency__footer {
     min-height: 200px;
+
     flex-grow: 2;
 
 
@@ -275,6 +276,7 @@ nav {
 }
 
 .comment-section {
+    max-width: 340px;
     padding-top: 15px;
     border-top: 2px solid var(--color-primary-800);
 }
