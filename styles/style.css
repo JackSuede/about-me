@@ -7,7 +7,7 @@
 :root {
     --fs_100: 16px;
     --fs_200: 18px;
-    --fs_300: 22px;
+    --fs_300: 20px;
     --fs_400: 26px;
     --fs_500: 30px;
     --fs_600: 40px;
@@ -639,8 +639,8 @@ nav {
     }
 
     .heading-style {
-        margin-bottom: 15px;
-        font-size: var(--fs_500);
+        margin-bottom: 28px;
+        font-size: var(--fs_400);
     }
 
 
@@ -649,7 +649,7 @@ nav {
         padding: var(--content-padding);
         padding-bottom: 90px;
         font-size: var(--fs_300);
-        line-height: 2.5rem;
+        line-height: 2.3rem;
         letter-spacing: 2px;
         box-shadow: var(--shadow);
     }
